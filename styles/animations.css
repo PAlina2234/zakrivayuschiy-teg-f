@@ -12,3 +12,117 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+/* Движение стрелки */
+@keyframes switch-moving {
+    from {
+      left: -15px;
+    }
+    to {
+      left: -20px;
+    }
+  }
+
+  @keyframes scale {
+    from {
+      transform: scale(1);
+    }
+  
+    to {
+      transform: scale(1.15);
+    }
+  }
+
+  /* Анимация сердечка */
+
+  .like-icon {
+    transform-origin: center;
+    cursor: pointer;
+  }
+  
+  .sparks {
+    opacity: 0;
+    fill: var(--heart-fill-color, #ff0000);
+  }
+  
+  .like-icon.is-liked .sparks {
+    animation: heart-sparks 0.3s 0.3s ease-in alternate;
+    transform-origin: center;
+  }
+  
+  .contour {
+    fill: var(--heart-contour-color, #000);
+    transition: fill 0.1s linear;
+  }
+  
+  .like-icon.is-liked .contour  {
+    fill: var(--heart-fill-color, #ff0000);
+    transition: fill 0.3s 0.06s ease;
+  }
+  
+  .core {
+    fill: transparent;
+    transition: fill 0.3s 0.03s ease;
+  }
+  
+  .like-icon:hover .core {
+    fill: var(--heart-contour-color, #000);
+    transition: fill 0.3s linear;
+  }
+  
+  .like-icon:active .core {
+    fill: var(--heart-fill-color, #ff0000);
+    transition: fill 0.3s ease;
+  }
+  
+  .like-icon.is-liked .core {
+    fill: var(--heart-fill-color, #ff0000);
+    transition: fill 0.3s ease;
+  }
+  
+  .main-body {
+    fill: transparent;
+    transition: fill 0.3s ease;
+  }
+  
+  .like-icon:hover .main-body {
+    fill: var(--heart-contour-color, #000);
+    transition: fill 0.3s 0.05s linear;
+  }
+  
+  .like-icon:active .main-body {
+    fill: var(--heart-fill-color, #ff0000);
+    transition: fill 0.3s 0.05s ease;
+  }
+  
+  .like-icon.is-liked .main-body {
+    fill: var(--heart-fill-color, #ff0000);
+    transition: fill 0.3s 0.05s ease;
+  }
+  
+  .like-icon.is-liked {
+    animation: scale 0.3s 0.1s ease-in alternate;
+  }
+
+  .like-icon.is-liked .heart {
+    animation: heart-scale 0.3s ease-in alternate;
+    transform-origin: center;
+  }
+
+  @keyframes heart {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.5);
+    }
+  }
+  
+  @keyframes heart-sparks {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
