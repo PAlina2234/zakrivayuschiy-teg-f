@@ -25,6 +25,11 @@
     --caption-font-size: clamp(3.063rem, 2.063rem + 3.2vw, 4.063rem);
     --header-text-font-size: clamp(0.875rem, 0.313rem + 1.8vw, 1.438rem);
     --heart-color: #ff0000;
+    --label-stroke: #fff;
+    --mix-blend-font-color: #fff;
+    --heart-fill-color: #ff0000;
+    --heart-contour-color: #000;
+    --accept-font-family: 'Press Start 2P', fantasy;
     }
 
 
