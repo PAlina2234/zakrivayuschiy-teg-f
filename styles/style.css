@@ -17,7 +17,6 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: var(--text-font-weight);
   background-color: var(--page-bg-color, #fff);
   color: var(--text-color);
   background-image: var(--page-background-image, none);
@@ -422,5 +421,37 @@
   filter: opacity(0.9);
 }
 
+/*Мобильная версия сайта  */
 
+@media (width <= 376px) {
+  .header {
+    min-block-size: 324px;
+  }
+  
+  .caption {
+    padding-top: 120px;
+  }
+
+  .card-list {
+    gap: 50px;
+  }
+
+  .save-button {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .floppy-image {
+    inline-size: 29px;
+    block-size: 29px;
+  }
+
+  .dialog__text {
+    max-inline-size: 198px;
+  }
+
+  .button__container {
+    margin-block-end: 102px;
+  }
+}
 

@@ -121,38 +121,6 @@
     }
   }
 
-  /*Мобильная версия сайта  */
-
-  @media (width <= 376px) {
-    .header {
-      min-block-size: 324px;
-    }
-    
-    .caption {
-      padding-top: 120px;
-    }
-
-    .card-list {
-      gap: 50px;
-    }
   
-    .save-button {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .floppy-image {
-      inline-size: 29px;
-      block-size: 29px;
-    }
-  
-    .dialog__text {
-      max-inline-size: 198px;
-    }
-
-    .button__container {
-      margin-block-end: 102px;
-    }
-  }
   
   
